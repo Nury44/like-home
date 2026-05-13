@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like Home | Traditional Homemade Kitchen</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="#home" class="logo">
+                <img src="images/Logo.jpeg" alt="Like Home Logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                <span>Like Home</span>
+            </a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#meals">Meals</a>
+                <a href="#plans">Plans</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars fa-2x"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-logo">
+                <img src="images/Logo.jpeg" alt="Like Home Logo" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; position: relative; z-index: 2;">
+            </div>
+            <h1>"Food that feels like home."</h1>
+            <p>Being far from home is never easy — especially when you miss the taste and comfort of homemade food.</p>
+            <div class="btn-group">
+                <a href="#meals" class="btn btn-primary">Explore Our Menu</a>
+                <a href="#plans" class="btn btn-outline">Meal Plans</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-card reveal">
+                <span class="section-tag">About Us</span>
+                <h2>Homemade with Love, Prepared for Students</h2>
+                <div class="divider"></div>
+                <div class="about-text">
+                    <p>Like Home was created to bring students a feeling of home through warm, homemade meals prepared with care by student chefs in the dormitory community.</p>
+                    <p>We are not just about food. We are about comfort after a long day, familiar flavors, and meals that make student life feel a little more like home.</p>
+                    <p>More than food — every meal should feel like home.</p>
+                </div>
+                <div class="about-signature">“Food that feels like home.”</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meals Section -->
+    <section id="meals" class="meals">
+        <div class="container">
+            <div class="meals-header reveal">
+                <span class="section-tag">Weekly Specials</span>
+                <h2>The Homemade Collection</h2>
+            </div>
+
+            <div class="meal-list">
+                <!-- Tuesday Meal -->
+                <div class="meal-item reveal">
+                    <div class="meal-image-wrapper">
+                        <img src="images/Kotlet.jpeg" alt="Mashed Potatoes with Chicken Cutlets">
+                        <div class="meal-price-tag">Tuesday</div>
+                    </div>
+                    <div class="meal-info">
+                        <h3>Mashed Potatoes with Chicken Cutlets</h3>
+                        <p>A filling homemade meal with creamy mashed potatoes and two chicken cutlets — perfect after a long day of studying.</p>
+                        <ul style="list-style: none; margin-bottom: 1.5rem; color: var(--secondary-text);">
+                            <li><i class="fas fa-gift" style="color: var(--primary-accent); margin-right: 0.5rem;"></i> Free: Small salad, 2 pieces of bread, Coca-Cola</li>
+                            <li><i class="fas fa-info-circle" style="color: var(--primary-accent); margin-right: 0.5rem;"></i> High protein: 40g • 500 calories</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Thursday Meal -->
+                <div class="meal-item reveal">
+                    <div class="meal-image-wrapper">
+                        <img src="images/Palov.jpeg" alt="Turkmen Chicken Plov">
+                        <div class="meal-price-tag">Thursday</div>
+                    </div>
+                    <div class="meal-info">
+                        <h3>Turkmen Chicken Plov</h3>
+                        <p>A traditional Turkmen plov with chicken, soft rice, and rich homemade flavor. Filling, warm, and perfect for a satisfying dinner.</p>
+                        <ul style="list-style: none; margin-bottom: 1.5rem; color: var(--secondary-text);">
+                            <li><i class="fas fa-star" style="color: var(--primary-accent); margin-right: 0.5rem;"></i> Traditional homemade recipe</li>
+                            <li><i class="fas fa-gift" style="color: var(--primary-accent); margin-right: 0.5rem;"></i> Free: Small salad, Coca-Cola</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Friday/Other Meal (Optional: Using Merjimek) -->
+                <div class="meal-item reveal">
+                    <div class="meal-image-wrapper">
+                        <img src="images/Merjimek.jpeg" alt="Traditional Lentil Soup">
+                        <div class="meal-price-tag">Daily Special</div>
+                    </div>
+                    <div class="meal-info">
+                        <h3>Traditional Lentil Soup</h3>
+                        <p>Hearty and warming traditional lentil soup, a staple of comfort and nutrition for every student.</p>
+                        <a href="#contact" class="btn btn-outline">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section id="plans" class="plans">
+        <div class="container">
+            <div class="meals-header reveal">
+                <span class="section-tag">Tailored for You</span>
+                <h2>Our Meal Plans</h2>
+                <p style="color: var(--secondary-text); font-style: italic; margin-top: 1rem;">Enjoy the convenience of homemade meals delivered regularly to your home.</p>
+            </div>
+
+            <div class="plans-grid">
+                <!-- Plan 1 -->
+                <div class="plan-card reveal">
+                    <h3>Smarter Plan</h3>
+                    <div class="plan-price">
+                        <span class="amount">RM49</span>
+                        <span class="period">/ Week</span>
+                    </div>
+                    <p class="plan-description">Perfect for busy students who want to try warm homemade dinners during the week.</p>
+                    <ul class="plan-features">
+                        <li>✅ 3 Homemade Combo Set</li>
+                        <li>✅ Fresh salad included</li>
+                        <li>✅ Coca-Cola included</li>
+                        <li>✅ Bread included</li>
+                    </ul>
+                    <div class="plan-footnote">
+                        RM 16.3333 per meal<br>
+                        Save RM 4
+                    </div>
+                    <a href="#contact" class="btn btn-outline">Choose Plan</a>
+                </div>
+
+                <!-- Plan 2 -->
+                <div class="plan-card highlight reveal">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Premium Plan ⭐</h3>
+                    <div class="plan-price">
+                        <span class="amount">RM99</span>
+                        <span class="period">/ 2 Weeks</span>
+                    </div>
+                    <p class="plan-description">The best option for students who want less stress and full comfort for 2 weeks.</p>
+                    <ul class="plan-features">
+                        <li>✅ 6 Homemade Combo Set</li>
+                        <li>✅ Fresh salad included</li>
+                        <li>✅ Coca-Cola included</li>
+                        <li>✅ Bread included</li>
+                        <li>✅ Bigger portions</li>
+                        <li>✅ 1 Mystery Dessert</li>
+                        <li>✅ Premium member benefits</li>
+                    </ul>
+                    <div class="plan-footnote">
+                        RM 16.5 per meal<br>
+                        SAVE RM 9
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Choose Plan</a>
+                </div>
+            </div>
+
+            <!-- Premium Benefits Section -->
+            <div class="premium-benefits-callout reveal">
+                <h3>Why Students Choose Premium</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Better value with every meal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Two stress-free weeks without worrying about dinner</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Exclusive Mystery Dessert only for Premium members</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Bigger portions made for long university days</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Priority service during busy hours</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Homemade comfort food that feels like home</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="meals-header reveal">
+                <span class="section-tag">Get in Touch</span>
+                <h2>Connect with Our Kitchen</h2>
+                <p style="color: var(--secondary-text); max-width: 600px; margin: 1rem auto 0;">We'd love to hear from you. Whether it's for a special order or just a question.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-methods">
+                    <a href="https://wa.me/60179379476" target="_blank" class="contact-method-card whatsapp reveal">
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="font-bold">WhatsApp</span>
+                        <p style="font-size: 0.8rem;">+60 17-937 9476</p>
+                    </a>
+                    <a href="javascript:void(0)" id="instagram-link" class="contact-method-card instagram reveal">
+                        <i class="fab fa-instagram"></i>
+                        <span class="font-bold">Instagram</span>
+                        <p style="font-size: 0.8rem;">Coming Soon</p>
+                    </a>
+                    <div class="contact-method-card reveal">
+                        <i class="fas fa-phone"></i>
+                        <span class="font-bold">Call Us</span>
+                        <p style="font-size: 0.8rem;">+60 17-937 9476</p>
+                    </div>
+                    <div class="contact-method-card reveal">
+                        <i class="fas fa-clock"></i>
+                        <span class="font-bold">Service Hours</span>
+                        <p style="font-size: 0.8rem;">Tue & Thu: 6PM - 9PM</p>
+                    </div>
+                </div>
+
+                <div class="contact-form-container reveal">
+                    <h3>How was your meal?</h3>
+                    <p>Your feedback is anonymous and helps us bring you the best homemade experience. Was it good? How can we improve?</p>
+                    <form class="contact-form" id="feedback-form">
+                        <!-- WEB3FORMS CONFIG -->
+                        <input type="hidden" name="access_key" value="62929efa-ba0e-4be0-930f-836aafd18e7a">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+                        <input type="hidden" name="subject" value="New Feedback from Like Home">
+                        <input type="hidden" name="from_name" value="Like Home Website">
+
+                        <div class="feedback-rating">
+                            <label>Rate your experience:</label>
+                            <div class="rating-options">
+                                <label><input type="radio" name="rating" value="excellent"> 😍</label>
+                                <label><input type="radio" name="rating" value="good"> 😊</label>
+                                <label><input type="radio" name="rating" value="ok"> 😐</label>
+                                <label><input type="radio" name="rating" value="bad"> 😞</label>
+                            </div>
+                        </div>
+                        <textarea name="suggestions" placeholder="Any suggestions to make it better? (Optional)"></textarea>
+                        <button type="submit" class="btn-submit">Submit Anonymous Feedback</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#home" class="logo" style="color: white;">
+                        <div class="logo-circle">LH</div>
+                        <span>Like Home</span>
+                    </a>
+                    <p>"Bringing the warmth of homemade hospitality to your table, one dish at a time."</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="link-group">
+                        <span>Explore</span>
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#meals">Meals</a>
+                    </div>
+                    <div class="link-group">
+                        <span>Support</span>
+                        <a href="#plans">Meal Plans</a>
+                        <a href="#contact">Contact</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+
+                <div class="footer-social">
+                    <span style="color: var(--luxury-highlight); text-transform: uppercase; font-size: 0.75rem; font-weight: bold; letter-spacing: 0.2em;">Follow Us</span>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Like Home Homemade Kitchen. All rights reserved.</p>
+                <p>Handcrafted with Passion & Tradition.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
