@@ -351,78 +351,249 @@ nav .container {
 /* Meals Section */
 .meals-header {
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 .meals-header h2 {
     font-size: 3.5rem;
 }
 
-.meal-item {
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-    margin-bottom: 8rem;
+.meal-carousel-wrapper {
+    position: relative;
+    padding: 0;
+    margin: 0 -1rem; /* Negative margin to bleed out of container padding */
 }
 
-.meal-item:nth-child(even) {
-    flex-direction: row-reverse;
+.meal-carousel {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 2rem 1.5rem; /* Horizontal padding for first/last items */
+    scrollbar-width: thin; /* PC visibility */
+    scrollbar-color: var(--primary-accent) transparent;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+}
+
+.meal-carousel::-webkit-scrollbar {
+    height: 6px;
+}
+
+.meal-carousel::-webkit-scrollbar-thumb {
+    background: var(--primary-accent);
+    border-radius: 10px;
+}
+
+.meal-card {
+    flex: 0 0 750px;
+    scroll-snap-align: center;
+    background-color: var(--card-bg);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-luxury);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 850px; /* Increased total height to prevent squeezing */
+}
+
+@media (max-width: 992px) {
+    .meal-card {
+        flex: 0 0 90%;
+        height: 800px;
+    }
+}
+
+@media (max-width: 600px) {
+    .meal-card {
+        flex: 0 0 90%;
+        flex-direction: column;
+        height: 600px; /* Tall vertical on mobile too */
+    }
+    .meal-carousel-wrapper {
+        margin: 0 -2rem;
+    }
+    .carousel-nav {
+        display: none;
+    }
+}
+
+.meal-card:hover {
+    transform: translateY(-5px);
 }
 
 .meal-image-wrapper {
-    flex: 1;
     position: relative;
-    border-radius: 2rem;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    width: 100%;
+    height: 500px; /* Much taller image area to fit flyers */
+    background-color: var(--card-bg); /* Match card background for seamless fit */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .meal-image-wrapper {
+        width: 100%;
+        height: 300px;
+    }
 }
 
 .meal-image-wrapper img {
     width: 100%;
-    height: 450px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.6s ease;
+    height: 100%;
+    object-fit: contain; /* Ensures 100% of the flyer is visible */
+    padding: 0;
+    cursor: pointer; /* Indicates it's clickable */
+    transition: opacity 0.3s ease;
 }
 
-.meal-image-wrapper:hover img {
-    transform: scale(1.05);
+.meal-image-wrapper img:hover {
+    opacity: 0.9;
 }
 
-.meal-price-tag {
-    position: absolute;
-    bottom: 1.5rem;
-    right: 1.5rem;
-    background-color: rgba(255, 253, 248, 0.9);
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(5px);
-    padding: 0.5rem 1.5rem;
-    border-radius: 9999px;
-    font-family: var(--font-serif);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 1rem;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
     font-weight: bold;
-    font-size: 1.5rem;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 2100;
+}
+
+.close-modal:hover,
+.close-modal:focus {
     color: var(--primary-accent);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-decoration: none;
+}
+
+#modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 20px 0;
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+.meal-day-tag {
+    display: inline-block;
+    background-color: var(--primary-accent);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    align-self: flex-start;
 }
 
 .meal-info {
-    flex: 1;
-    background-color: rgba(255, 248, 235, 0.4);
-    backdrop-filter: blur(5px);
-    padding: 3rem;
-    border-radius: 2rem;
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--shadow-luxury);
+    padding: 2rem;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 600px) {
+    .meal-info {
+        padding: 1.5rem;
+    }
 }
 
 .meal-info h3 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
 }
 
 .meal-info p {
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: var(--secondary-text);
     margin-bottom: 2rem;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.meal-info .btn {
+    width: 100%; /* Full width button */
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.carousel-btn {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 2px solid var(--primary-accent);
+    background: white;
+    color: var(--primary-accent);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.carousel-btn:hover {
+    background-color: var(--primary-accent);
+    color: white;
+    transform: translateY(-2px);
 }
 
 /* Plans Section */
