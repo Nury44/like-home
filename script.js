@@ -54,6 +54,58 @@ document.addEventListener('DOMContentLoaded', () => {
         revealOnScroll.observe(reveal);
     });
 
+    // Carousel Navigation
+    const carouselWrappers = document.querySelectorAll('.meal-carousel-wrapper');
+
+    carouselWrappers.forEach(wrapper => {
+        const carousel = wrapper.querySelector('.meal-carousel');
+        const prevBtn = wrapper.querySelector('.carousel-btn.prev');
+        const nextBtn = wrapper.querySelector('.carousel-btn.next');
+
+        if (carousel && prevBtn && nextBtn) {
+            const scrollAmount = 320; // card width + gap approx
+            prevBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+
+            nextBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+        }
+    });
+
+    // Image Modal (Lightbox) Logic
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+    const captionText = document.getElementById('modal-caption');
+    const mealImages = document.querySelectorAll('.meal-image-wrapper img');
+    const closeModal = document.querySelector('.close-modal');
+
+    if (modal && modalImg && mealImages.length > 0) {
+        mealImages.forEach(img => {
+            img.addEventListener('click', () => {
+                modal.style.display = "block";
+                modalImg.src = img.src;
+                captionText.innerHTML = img.alt;
+                document.body.style.overflow = "hidden"; // Prevent scrolling behind modal
+            });
+        });
+
+        const closeFunc = () => {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto"; // Restore scrolling
+        };
+
+        closeModal.addEventListener('click', closeFunc);
+        
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeFunc();
+            }
+        });
+    }
+
     // Handle Instagram "Coming Soon"
     const instaLink = document.getElementById('instagram-link');
     if (instaLink) {
