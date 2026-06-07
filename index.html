@@ -22,9 +22,9 @@
             </a>
             <div class="nav-links">
                 <a href="#home">Home</a>
-                <a href="#about">About</a>
                 <a href="#meals">Meals</a>
-                <a href="#plans">Plans</a>
+                <a href="#salads">Salads</a>
+                <a href="#desserts">Desserts</a>
                 <a href="#contact">Contact</a>
             </div>
             <button class="menu-toggle">
@@ -43,24 +43,6 @@
             <p>Being far from home is never easy — especially when you miss the taste and comfort of homemade food.</p>
             <div class="btn-group">
                 <a href="#meals" class="btn btn-primary">Explore Our Menu</a>
-                <a href="#plans" class="btn btn-outline">Meal Plans</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-card reveal">
-                <span class="section-tag">About Us</span>
-                <h2>Homemade with Love, Prepared for Students</h2>
-                <div class="divider"></div>
-                <div class="about-text">
-                    <p>Like Home was created to bring students a feeling of home through warm, homemade meals prepared with care by student chefs in the dormitory community.</p>
-                    <p>We are not just about food. We are about comfort after a long day, familiar flavors, and meals that make student life feel a little more like home.</p>
-                    <p>More than food — every meal should feel like home.</p>
-                </div>
-                <div class="about-signature">“Food that feels like home.”</div>
             </div>
         </div>
     </section>
@@ -73,142 +55,182 @@
                 <h2>The Homemade Collection</h2>
             </div>
 
-            <div class="meal-list">
-                <!-- Tuesday Meal -->
-                <div class="meal-item reveal">
-                    <div class="meal-image-wrapper">
-                        <img src="images/Kotlet.jpeg" alt="Mashed Potatoes with Chicken Cutlets">
-                        <div class="meal-price-tag">Tuesday</div>
+            <div class="meal-carousel-wrapper">
+                <div class="meal-carousel">
+                    <!-- Monday Meal -->
+                    <div class="meal-card">
+                        <div class="meal-image-wrapper">
+                            <img src="images/Pelmeni.jpeg" alt="Pelmeni">
+                        </div>
+                        <div class="meal-info">
+                            <div class="meal-day-tag">Monday</div>
+                            <h3>Pelmeni</h3>
+                            <p>Hand-made traditional dumplings filled with seasoned meat, served with a side of fresh sour cream.</p>
+                            <a href="#contact" class="btn btn-outline">Order Now</a>
+                        </div>
                     </div>
-                    <div class="meal-info">
-                        <h3>Mashed Potatoes with Chicken Cutlets</h3>
-                        <p>A filling homemade meal with creamy mashed potatoes and two chicken cutlets — perfect after a long day of studying.</p>
-                        <ul style="list-style: none; margin-bottom: 1.5rem; color: var(--secondary-text);">
-                            <li><i class="fas fa-gift" style="color: var(--primary-accent); margin-right: 0.5rem;"></i> Free: Small salad, 2 pieces of bread, Coca-Cola</li>
-                            <li><i class="fas fa-info-circle" style="color: var(--primary-accent); margin-right: 0.5rem;"></i> High protein: 40g • 500 calories</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline">Order Now</a>
+
+                    <!-- Tuesday Meal -->
+                    <div class="meal-card">
+                        <div class="meal-image-wrapper">
+                            <img src="images/Cheburek.jpeg" alt="Cheburek">
+                        </div>
+                        <div class="meal-info">
+                            <div class="meal-day-tag">Tuesday</div>
+                            <h3>Cheburek</h3>
+                            <p>Deep-fried turnovers filled with juicy minced meat and onions. Crispy on the outside, tender inside.</p>
+                            <a href="#contact" class="btn btn-outline">Order Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Wednesday Meal -->
+                    <div class="meal-card">
+                        <div class="meal-image-wrapper">
+                            <img src="images/kofte.jpeg" alt="Kofte">
+                        </div>
+                        <div class="meal-info">
+                            <div class="meal-day-tag">Wednesday</div>
+                            <h3>Kofte</h3>
+                            <p>Traditional grilled meatballs seasoned with a blend of aromatic spices and served with fresh herbs.</p>
+                            <a href="#contact" class="btn btn-outline">Order Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Friday Meal -->
+                    <div class="meal-card">
+                        <div class="meal-image-wrapper">
+                            <img src="images/cabbage.jpeg" alt="Cabbage">
+                        </div>
+                        <div class="meal-info">
+                            <div class="meal-day-tag">Friday</div>
+                            <h3>Cabbage</h3>
+                            <p>Flavorful stuffed cabbage rolls or a hearty cabbage-based stew, slow-cooked for ultimate comfort.</p>
+                            <a href="#contact" class="btn btn-outline">Order Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Saturday Meal -->
+                    <div class="meal-card">
+                        <div class="meal-image-wrapper">
+                            <img src="images/Manty.jpeg" alt="Manty">
+                        </div>
+                        <div class="meal-info">
+                            <div class="meal-day-tag">Saturday</div>
+                            <h3>Manty</h3>
+                            <p>Large steamed dumplings filled with spiced meat and onions, a staple of Central Asian hospitality.</p>
+                            <a href="#contact" class="btn btn-outline">Order Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Sunday Meal -->
+                    <div class="meal-card">
+                        <div class="meal-image-wrapper">
+                            <img src="images/Palow.jpeg" alt="Palow">
+                        </div>
+                        <div class="meal-info">
+                            <div class="meal-day-tag">Sunday</div>
+                            <h3>Palow</h3>
+                            <p>Traditional festive rice dish cooked with tender meat, carrots, and spices. The heart of the Turkmen kitchen.</p>
+                            <a href="#contact" class="btn btn-outline">Order Now</a>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Thursday Meal -->
-                <div class="meal-item reveal">
-                    <div class="meal-image-wrapper">
-                        <img src="images/Palov.jpeg" alt="Turkmen Chicken Plov">
-                        <div class="meal-price-tag">Thursday</div>
-                    </div>
-                    <div class="meal-info">
-                        <h3>Turkmen Chicken Plov</h3>
-                        <p>A traditional Turkmen plov with chicken, soft rice, and rich homemade flavor. Filling, warm, and perfect for a satisfying dinner.</p>
-                        <ul style="list-style: none; margin-bottom: 1.5rem; color: var(--secondary-text);">
-                            <li><i class="fas fa-star" style="color: var(--primary-accent); margin-right: 0.5rem;"></i> Traditional homemade recipe</li>
-                            <li><i class="fas fa-gift" style="color: var(--primary-accent); margin-right: 0.5rem;"></i> Free: Small salad, Coca-Cola</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline">Order Now</a>
-                    </div>
-                </div>
-
-                <!-- Friday/Other Meal (Optional: Using Merjimek) -->
-                <div class="meal-item reveal">
-                    <div class="meal-image-wrapper">
-                        <img src="images/Merjimek.jpeg" alt="Traditional Lentil Soup">
-                        <div class="meal-price-tag">Daily Special</div>
-                    </div>
-                    <div class="meal-info">
-                        <h3>Traditional Lentil Soup</h3>
-                        <p>Hearty and warming traditional lentil soup, a staple of comfort and nutrition for every student.</p>
-                        <a href="#contact" class="btn btn-outline">Order Now</a>
-                    </div>
+                <!-- Carousel Navigation Arrows -->
+                <div class="carousel-nav">
+                    <button class="carousel-btn prev" aria-label="Previous meal"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn next" aria-label="Next meal"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Plans Section -->
-    <section id="plans" class="plans">
+    <!-- Salads Section -->
+    <section id="salads" class="meals">
         <div class="container">
             <div class="meals-header reveal">
-                <span class="section-tag">Tailored for You</span>
-                <h2>Our Meal Plans</h2>
-                <p style="color: var(--secondary-text); font-style: italic; margin-top: 1rem;">Enjoy the convenience of homemade meals delivered regularly to your home.</p>
+                <span class="section-tag">Fresh & Healthy</span>
+                <h2>Homemade Salads</h2>
+                <p style="color: var(--secondary-text); font-style: italic; margin-top: 1rem;">Available every day. Please order 3-4 hours in advance.</p>
             </div>
 
-            <div class="plans-grid">
-                <!-- Plan 1 -->
-                <div class="plan-card reveal">
-                    <h3>Smarter Plan</h3>
-                    <div class="plan-price">
-                        <span class="amount">RM49</span>
-                        <span class="period">/ Week</span>
+            <div class="meal-carousel-wrapper">
+                <div class="meal-carousel">
+                    <!-- Potshuba Salad -->
+                    <div class="meal-card">
+                        <div class="meal-image-wrapper">
+                            <img src="images/Potshuba.jpeg" alt="Potshuba">
+                        </div>
+                        <div class="meal-info">
+                            <div class="meal-day-tag">Special</div>
+                            <h3>Potshuba</h3>
+                            <p>Layered salad with herring, potatoes, carrots, beets, and onions — a traditional celebratory dish.</p>
+                            <a href="#contact" class="btn btn-outline">Order Now</a>
+                        </div>
                     </div>
-                    <p class="plan-description">Perfect for busy students who want to try warm homemade dinners during the week.</p>
-                    <ul class="plan-features">
-                        <li>✅ 3 Homemade Combo Set</li>
-                        <li>✅ Fresh salad included</li>
-                        <li>✅ Coca-Cola included</li>
-                        <li>✅ Bread included</li>
-                    </ul>
-                    <div class="plan-footnote">
-                        RM 16.3333 per meal<br>
-                        Save RM 4
-                    </div>
-                    <a href="#contact" class="btn btn-outline">Choose Plan</a>
-                </div>
 
-                <!-- Plan 2 -->
-                <div class="plan-card highlight reveal">
-                    <div class="popular-badge">Most Popular</div>
-                    <h3>Premium Plan ⭐</h3>
-                    <div class="plan-price">
-                        <span class="amount">RM99</span>
-                        <span class="period">/ 2 Weeks</span>
+                    <!-- Olivie Salad -->
+                    <div class="meal-card">
+                        <div class="meal-image-wrapper">
+                            <img src="images/Olivie.jpeg" alt="Olivie">
+                        </div>
+                        <div class="meal-info">
+                            <div class="meal-day-tag">Special</div>
+                            <h3>Olivie</h3>
+                            <p>Classic potato salad with peas, pickles, eggs, and carrots in a creamy homemade dressing.</p>
+                            <a href="#contact" class="btn btn-outline">Order Now</a>
+                        </div>
                     </div>
-                    <p class="plan-description">The best option for students who want less stress and full comfort for 2 weeks.</p>
-                    <ul class="plan-features">
-                        <li>✅ 6 Homemade Combo Set</li>
-                        <li>✅ Fresh salad included</li>
-                        <li>✅ Coca-Cola included</li>
-                        <li>✅ Bread included</li>
-                        <li>✅ Bigger portions</li>
-                        <li>✅ 1 Mystery Dessert</li>
-                        <li>✅ Premium member benefits</li>
-                    </ul>
-                    <div class="plan-footnote">
-                        RM 16.5 per meal<br>
-                        SAVE RM 9
-                    </div>
-                    <a href="#contact" class="btn btn-primary">Choose Plan</a>
+                </div>
+                <!-- Carousel Navigation Arrows -->
+                <div class="carousel-nav">
+                    <button class="carousel-btn prev" aria-label="Previous salad"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn next" aria-label="Next salad"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Premium Benefits Section -->
-            <div class="premium-benefits-callout reveal">
-                <h3>Why Students Choose Premium</h3>
-                <div class="benefits-grid">
-                    <div class="benefit-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Better value with every meal</span>
+    <!-- Desserts Section -->
+    <section id="desserts" class="meals">
+        <div class="container">
+            <div class="meals-header reveal">
+                <span class="section-tag">Sweet Endings</span>
+                <h2>Homemade Desserts</h2>
+                <p style="color: var(--secondary-text); font-style: italic; margin-top: 1rem;">Please place your dessert orders at least 2 days in advance.</p>
+            </div>
+
+            <div class="meal-carousel-wrapper">
+                <div class="meal-carousel">
+                    <!-- Medovik -->
+                    <div class="meal-card">
+                        <div class="meal-image-wrapper">
+                            <img src="images/Medovik.jpeg" alt="Medovik">
+                        </div>
+                        <div class="meal-info">
+                            <div class="meal-day-tag">Sweet</div>
+                            <h3>Medovik</h3>
+                            <p>Classic honey cake with multiple thin layers of honey-infused sponge and a rich, creamy frosting.</p>
+                            <a href="#contact" class="btn btn-outline">Order Now</a>
+                        </div>
                     </div>
-                    <div class="benefit-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Two stress-free weeks without worrying about dinner</span>
+
+                    <!-- Blincik -->
+                    <div class="meal-card">
+                        <div class="meal-image-wrapper">
+                            <img src="images/blincik.jpeg" alt="Blincik">
+                        </div>
+                        <div class="meal-info">
+                            <div class="meal-day-tag">Sweet</div>
+                            <h3>Blincik</h3>
+                            <p>Thin, delicate crepes served with your choice of sweet fillings — perfect for a light dessert.</p>
+                            <a href="#contact" class="btn btn-outline">Order Now</a>
+                        </div>
                     </div>
-                    <div class="benefit-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Exclusive Mystery Dessert only for Premium members</span>
-                    </div>
-                    <div class="benefit-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Bigger portions made for long university days</span>
-                    </div>
-                    <div class="benefit-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Priority service during busy hours</span>
-                    </div>
-                    <div class="benefit-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Homemade comfort food that feels like home</span>
-                    </div>
+                </div>
+                <!-- Carousel Navigation Arrows -->
+                <div class="carousel-nav">
+                    <button class="carousel-btn prev" aria-label="Previous dessert"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn next" aria-label="Next dessert"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
         </div>
@@ -230,20 +252,15 @@
                         <span class="font-bold">WhatsApp</span>
                         <p style="font-size: 0.8rem;">+60 17-937 9476</p>
                     </a>
-                    <a href="javascript:void(0)" id="instagram-link" class="contact-method-card instagram reveal">
+                    <a href="https://www.instagram.com/_likehome_food?igsh=aXhwNDQxancwaTg4" target="_blank" class="contact-method-card instagram reveal">
                         <i class="fab fa-instagram"></i>
                         <span class="font-bold">Instagram</span>
-                        <p style="font-size: 0.8rem;">Coming Soon</p>
+                        <p style="font-size: 0.8rem;">@_likehome_food</p>
                     </a>
-                    <div class="contact-method-card reveal">
-                        <i class="fas fa-phone"></i>
-                        <span class="font-bold">Call Us</span>
-                        <p style="font-size: 0.8rem;">+60 17-937 9476</p>
-                    </div>
                     <div class="contact-method-card reveal">
                         <i class="fas fa-clock"></i>
                         <span class="font-bold">Service Hours</span>
-                        <p style="font-size: 0.8rem;">Tue & Thu: 6PM - 9PM</p>
+                        <p style="font-size: 0.8rem;">Daily: 8AM - 8PM</p>
                     </div>
                 </div>
 
@@ -286,37 +303,27 @@
                     <p>"Bringing the warmth of homemade hospitality to your table, one dish at a time."</p>
                 </div>
 
-                <div class="footer-links">
-                    <div class="link-group">
-                        <span>Explore</span>
-                        <a href="#home">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#meals">Meals</a>
-                    </div>
-                    <div class="link-group">
-                        <span>Support</span>
-                        <a href="#plans">Meal Plans</a>
-                        <a href="#contact">Contact</a>
-                        <a href="#">Privacy Policy</a>
-                    </div>
-                </div>
-
                 <div class="footer-social">
                     <span style="color: var(--luxury-highlight); text-transform: uppercase; font-size: 0.75rem; font-weight: bold; letter-spacing: 0.2em;">Follow Us</span>
                     <div class="social-icons">
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/_likehome_food?igsh=aXhwNDQxancwaTg4" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/60179379476" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
                 <p>© 2026 Like Home Homemade Kitchen. All rights reserved.</p>
-                <p>Handcrafted with Passion & Tradition.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Image Modal (Lightbox) -->
+    <div id="image-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="modal-caption"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>
