@@ -63,12 +63,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const nextBtn = wrapper.querySelector('.carousel-btn.next');
 
         if (carousel && prevBtn && nextBtn) {
-            const scrollAmount = 320; // card width + gap approx
             prevBtn.addEventListener('click', () => {
+                const firstCard = carousel.querySelector('.meal-card');
+                const scrollAmount = firstCard ? firstCard.offsetWidth + 24 : 320; // 24 is gap (1.5rem)
                 carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
             });
 
             nextBtn.addEventListener('click', () => {
+                const firstCard = carousel.querySelector('.meal-card');
+                const scrollAmount = firstCard ? firstCard.offsetWidth + 24 : 320; // 24 is gap (1.5rem)
                 carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
             });
         }
