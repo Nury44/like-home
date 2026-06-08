@@ -409,12 +409,13 @@ nav .container {
 
 @media (max-width: 600px) {
     .meal-card {
-        flex: 0 0 90%;
+        flex: 0 0 85%;
         flex-direction: column;
-        height: 600px; /* Tall vertical on mobile too */
+        height: auto; /* Allow card to grow with content */
+        min-height: 550px;
     }
     .meal-carousel-wrapper {
-        margin: 0 -2rem;
+        margin: 0 -1rem;
     }
     .carousel-nav {
         display: none;
@@ -435,10 +436,23 @@ nav .container {
     justify-content: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
+    .meal-card {
+        flex: 0 0 92%;
+        min-height: 500px;
+    }
     .meal-image-wrapper {
-        width: 100%;
-        height: 300px;
+        height: 250px;
+    }
+    .meal-info {
+        padding: 1.25rem;
+    }
+    .meal-info h3 {
+        font-size: 1.5rem;
+    }
+    .meal-info p {
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
     }
 }
 
