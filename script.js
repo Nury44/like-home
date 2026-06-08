@@ -54,29 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
         revealOnScroll.observe(reveal);
     });
 
-    // Carousel Navigation
-    const carouselWrappers = document.querySelectorAll('.meal-carousel-wrapper');
-
-    carouselWrappers.forEach(wrapper => {
-        const carousel = wrapper.querySelector('.meal-carousel');
-        const prevBtn = wrapper.querySelector('.carousel-btn.prev');
-        const nextBtn = wrapper.querySelector('.carousel-btn.next');
-
-        if (carousel && prevBtn && nextBtn) {
-            prevBtn.addEventListener('click', () => {
-                const firstCard = carousel.querySelector('.meal-card');
-                const scrollAmount = firstCard ? firstCard.offsetWidth + 24 : 320; // 24 is gap (1.5rem)
-                carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-            });
-
-            nextBtn.addEventListener('click', () => {
-                const firstCard = carousel.querySelector('.meal-card');
-                const scrollAmount = firstCard ? firstCard.offsetWidth + 24 : 320; // 24 is gap (1.5rem)
-                carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-            });
-        }
-    });
-
     // Image Modal (Lightbox) Logic
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-img');
