@@ -374,19 +374,14 @@ nav .container {
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     padding: 2rem 1.5rem; /* Horizontal padding for first/last items */
-    scrollbar-width: thin; /* PC visibility */
-    scrollbar-color: var(--primary-accent) transparent;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-x: contain;
 }
 
 .meal-carousel::-webkit-scrollbar {
-    height: 6px;
-}
-
-.meal-carousel::-webkit-scrollbar-thumb {
-    background: var(--primary-accent);
-    border-radius: 10px;
+    display: none; /* Hide scrollbar for Chrome/Safari/Webkit */
 }
 
 .meal-card {
@@ -585,10 +580,7 @@ nav .container {
 }
 
 .carousel-nav {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
+    display: none !important;
 }
 
 .carousel-btn {
