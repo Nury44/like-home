@@ -54,6 +54,33 @@ document.addEventListener('DOMContentLoaded', () => {
         revealOnScroll.observe(reveal);
     });
 
+    // === Carousel Logic (Scroll-based sliding) ===
+    document.querySelectorAll('.meal-carousel-wrapper').forEach(wrapper => {
+        const carousel = wrapper.querySelector('.meal-carousel');
+        const prevBtn = wrapper.querySelector('.carousel-btn.prev');
+        const nextBtn = wrapper.querySelector('.carousel-btn.next');
+
+        if (!carousel) return;
+
+        function getScrollAmount() {
+            const card = carousel.querySelector('.meal-card');
+            if (!card) return 300;
+            return card.offsetWidth + 24; // card width + gap
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+            });
+        }
+    });
+
     // Image Modal (Lightbox) Logic
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-img');
